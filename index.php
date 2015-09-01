@@ -37,13 +37,14 @@ function addButtonCss() {
 
 add_action( 'admin_head', 'addButtonCss' );
 
-function addButtonJs() {
+function addJs() {
 	if(checkPage()) {
-		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";
+		echo "<script type='text/javascript' src=".plugins_url('assets/js/chart-types.js', __FILE__)."></script>";
 		echo "<script type='text/javascript' src=".plugins_url('assets/js/form-function.js', __FILE__)."></script>";	
+		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";
 	}
 }
-add_action( 'admin_head', 'addButtonJs' );
+add_action( 'admin_head', 'addJs' );
 
 function addFormTemplate() {
 	if(checkPage()) {

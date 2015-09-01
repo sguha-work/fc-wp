@@ -4,6 +4,8 @@ jQuery(document).ready(function(){
 			var formHTML = jQuery("#fcwp_formTemplate").html();
 			jQuery('html,body').append(formHTML);
 			bindEvents();
+			loadFcChartTypes();
+			bindFormElementEvents();
 			loadPopupBox();
 		}),
 		unloadPopupBox = (function () {    // TO Unload the Popupbox
