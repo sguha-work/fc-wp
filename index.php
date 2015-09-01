@@ -31,27 +31,17 @@ add_action( 'admin_notices', 'fcWpShowButton' );
 function addButtonCss() {
 	if(checkPage()) {
 		$x = is_rtl() ? 'left' : 'right';
-		echo "
-			<style type='text/css'>
-				#fcwp_button {
-					float: $x;
-					padding-$x: 15px;
-					padding-top: 5px;		
-					margin: 0;
-					font-size: 11px;
-				}
-			</style>
-		";
+		echo "<link rel='stylesheet' href='".plugins_url('assets/css/button-style.css', __FILE__)."'/>";
 	}
 }
 
 add_action( 'admin_head', 'addButtonCss' );
 
-// function addButtonJs() {
-// 	if(checkPage()) {
-
-// 	}
-// }
-// add_action( 'admin_head', 'addButtonJs' );
+function addButtonJs() {
+	if(checkPage()) {
+		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";	
+	}
+}
+add_action( 'admin_head', 'addButtonJs' );
 
 ?>
