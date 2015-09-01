@@ -1,7 +1,7 @@
 <?php
 
     class FusionCharts {
-        
+        private $totalHtml;
         private $constructorOptions = array();
 
         private $constructorTemplate = '
@@ -52,14 +52,14 @@
             }
             $newChartHTML = preg_replace('/__constructorOptions__/', $jsonEncodedOptions, $this->constructorTemplate);
 
-            echo $newChartHTML;
+            $this->totalHtml = $newChartHTML;
         }
 
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
         function render() {
            $renderHTML = preg_replace('/__chartId__/', $this->constructorOptions['id'], $this->renderTemplate);
-           echo $renderHTML;
+           return $this->totalHtml.$renderHTML;
         }
 
     }
