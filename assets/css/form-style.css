@@ -1,5 +1,41 @@
-#fcwp_mainDiv {
-	width: 50%;
-	height: 40%;
-	background-color: red;
+/* popup_box DIV-Styles*/
+#fcwp_popupDiv { 
+    display:none; /* Hide the DIV */
+    position:fixed;  
+    _position:absolute; /* hack for internet explorer 6 */  
+    height:300px;  
+    width:600px;  
+    background:#FFFFFF;  
+    left: 300px;
+    top: 150px;
+    z-index:99999; /* Layering ( on-top of others), if you have lots of layers: I just maximized, you can change it yourself */
+    margin-left: 15px;  
+    
+    /* additional features, can be omitted */
+    border:2px solid #ff0000;      
+    padding:15px;  
+    font-size:15px;  
+    -moz-box-shadow: 0 0 5px #ff0000;
+    -webkit-box-shadow: 0 0 5px #ff0000;
+    box-shadow: 0 0 5px #ff0000;
+    background-color: yellow;
+}
+
+#fcwp_container {
+    background: #d2d2d2; /*Sample*/
+    width:100%;
+    height:100%;
+}
+
+/* This is for the positioning of the Close Link */
+#fcwp_popupBoxClose {
+	cursor: pointer;  
+	text-decoration:none; 
+    font-size:20px;  
+    line-height:15px;  
+    right:5px;  
+    top:5px;  
+    position:absolute;  
+    color:#6fa5e2;  
+    font-weight:500;      
 }

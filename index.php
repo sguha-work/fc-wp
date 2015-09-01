@@ -30,8 +30,8 @@ add_action( 'admin_notices', 'fcWpShowButton' );
 
 function addButtonCss() {
 	if(checkPage()) {
-		$x = is_rtl() ? 'left' : 'right';
 		echo "<link rel='stylesheet' href='".plugins_url('assets/css/button-style.css', __FILE__)."'/>";
+		echo "<link rel='stylesheet' href='".plugins_url('assets/css/form-style.css', __FILE__)."'/>";
 	}
 }
 
@@ -39,9 +39,16 @@ add_action( 'admin_head', 'addButtonCss' );
 
 function addButtonJs() {
 	if(checkPage()) {
-		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";	
+		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";
+		echo "<script type='text/javascript' src=".plugins_url('assets/js/form-function.js', __FILE__)."></script>";	
 	}
 }
 add_action( 'admin_head', 'addButtonJs' );
 
+function addFormTemplate() {
+	if(checkPage()) {
+		echo "<script type='text/html' id='fcwp_formTemplate'>".file_get_contents(plugins_url('assets/html/form.html', __FILE__))."</script>";	
+	}	
+}
+add_action( 'admin_head', 'addFormTemplate' );
 ?>
