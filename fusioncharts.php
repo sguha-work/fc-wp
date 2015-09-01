@@ -64,3 +64,22 @@
 
     }
 ?>
+<?php
+    $chart = new FusionCharts(
+            $_POST['chartType'], 
+            $_POST['chartId'], 
+            $_POST['chartWidth'], 
+            $_POST['chartHeight'], 
+            $_POST['chartContainerId'], 
+            $_POST['chartDataType'], 
+            '{  
+               "chart":
+               {  
+                  "caption":"'.$_POST['chartTitle'].'",
+                  "subCaption":"",
+                  "theme":"ocean"
+               },
+               "data":'.$_POST['chartData'].'
+        }');
+    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();
+?>
