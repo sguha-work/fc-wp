@@ -26,6 +26,28 @@ window.fcwp_main.populateDataSection = (function(element) {
 });
 
 window.fcwp_main.validateChartForm = (function() {
+	if(jQuery.trim(jQuery("#fcwp_chartTitle").val())=="") {
+		alert("Please enter chart title");
+		jQuery("#fcwp_chartTitle").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_chartTitle").css({
+			"border" : "1px solid green"
+		});
+	}
+	if(jQuery.trim(jQuery("#fcwp_chartType").val())=="") {
+		alert("Please enter chart type");
+		jQuery("#fcwp_chartType").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_chartType").css({
+			"border" : "1px solid green"
+		});
+	}
 	return 1;
 });
 
