@@ -1,6 +1,5 @@
 var loadFcChartTypes, bindFormElementEvents, populateDataSection, previewTheChart, validateChartForm, backToChartSettings, showEmbedCode;
-
-loadFcChartTypes= (function(){
+window.fcwp_main.loadFcChartTypes= (function(){
 	var index,optionHTML="";
 	for(index in fc_chartTypes) {
 		optionHTML += "<option value='"+fc_chartTypes[index].id+"'>"+fc_chartTypes[index].name+"</option>"
@@ -8,7 +7,7 @@ loadFcChartTypes= (function(){
 	jQuery("#fcwp_chartType").html(optionHTML);
 });
 
-populateDataSection = (function(element) {
+window.fcwp_main.populateDataSection = (function(element) {
 	var value = jQuery.trim(jQuery(element).val());
 	if(value != "") {
 		switch(value) {
@@ -26,12 +25,12 @@ populateDataSection = (function(element) {
 	}
 });
 
-validateChartForm = (function() {
+window.fcwp_main.validateChartForm = (function() {
 	return 1;
 });
 
-previewTheChart = (function() {
-	if(validateChartForm()) {
+window.fcwp_main.previewTheChart = (function() {
+	if(window.fcwp_main.validateChartForm()) {
 		var fcData = {
 				chartTitle : jQuery("#fcwp_chartTitle").val(),
 				chartType : jQuery("#fcwp_chartType").val(),
@@ -41,14 +40,14 @@ previewTheChart = (function() {
 				chartContainerId : jQuery("#fcwp_chartContainerId").val(),
 				chartDataType : jQuery("#fcwp_chartDataType").val(),
 				chartData : jQuery("#fcwp_data").val(),
-				filePath : window.fcwp_pluginPath
+				filePath : window.fcwp_main.fcwp_pluginPath
 			};
 		jQuery.ajax({
-			url : window.fcwp_pluginPath+"fusioncharts.php",
+			url : window.fcwp_main.fcwp_pluginPath+"fusioncharts.php",
 			data : fcData,
 			type: "POST",
 			success: function(returnData) {
-				window.fcwp_embedChartCode = returnData;
+				window.fcwp_main.fcwp_embedChartCode = returnData;
 				returnData = "<!DOCTYPE html><html><head></head><body>"+returnData+"</body></html>";
 				jQuery("#fcwp_preview object").attr('data',"data:text/html;charset=utf-8,"+escape(returnData));
 				jQuery("#fcwp_step1").fadeOut(function(){
@@ -59,31 +58,31 @@ previewTheChart = (function() {
 	}
 });
 
-showEmbedCode = (function() {
-	jQuery("#fcwp_embedCode").text(window.fcwp_embedChartCode);
+window.fcwp_main.showEmbedCode = (function() {
+	jQuery("#fcwp_embedCode").text(window.fcwp_main.fcwp_embedChartCode);
 	jQuery("#fcwp_preview").fadeOut(function() {
 		jQuery("#fcwp_code").fadeIn();	
 	});
 });
 
-backToChartSettings = (function() {
+window.fcwp_main.backToChartSettings = (function() {
 	jQuery("#fcwp_preview").fadeOut(function(){
 		jQuery("#fcwp_step1").fadeIn();
 	});
 });
 
-bindFormElementEvents = (function() {
+window.fcwp_main.bindFormElementEvents = (function() {
 	jQuery("#fcwp_chartDataType").unbind('change').on('change', function(event){
-		populateDataSection(event.currentTarget);
+		window.fcwp_main.populateDataSection(event.currentTarget);
 	});
 	jQuery("#fcwp_previewButton").unbind('click').on('click', function(event){
-		previewTheChart();
+		window.fcwp_main.previewTheChart();
 	});
 	jQuery("#fcwp_chartSettingsButton").unbind('click').on('click', function(){
-		backToChartSettings();
+		window.fcwp_main.backToChartSettings();
 	});
 	jQuery("#fcwp_embedChartButton").unbind('click').on('click', function() {
-		showEmbedCode();
+		window.fcwp_main.showEmbedCode();
 	});
 })
 

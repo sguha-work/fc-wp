@@ -39,7 +39,7 @@ add_action( 'admin_head', 'addButtonCss' );
 
 function addJs() {
 	if(checkPage()) {
-		echo "<script type='text/javascript'>window.fcwp_pluginPath = '".plugins_url('assets/',__FILE__)."'.split('assets/')[0];</script>";
+		echo "<script type='text/javascript'>window.fcwp_main = {};fcwp_main.fcwp_pluginPath = '".plugins_url('assets/',__FILE__)."'.split('assets/')[0];</script>";
 		echo "<script type='text/javascript' src=".plugins_url('assets/js/chart-types.js', __FILE__)."></script>";
 		echo "<script type='text/javascript' src=".plugins_url('assets/js/form-function.js', __FILE__)."></script>";	
 		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";
