@@ -131,6 +131,12 @@ window.fcwp_main.previewTheChart = (function() {
 				chartData : jQuery("#fcwp_data").val(),
 				filePath : window.fcwp_main.fcwp_pluginPath
 			};
+		if(parseInt(fcData.chartWidth)>400){
+			fcData.chartWidth = 400;
+		}
+		if(parseInt(fcData.chartHeight)>400){
+			fcData.chartWidth = 400;
+		}	
 		jQuery.ajax({
 			url : window.fcwp_main.fcwp_pluginPath+"fusioncharts.php",
 			data : fcData,
@@ -138,6 +144,10 @@ window.fcwp_main.previewTheChart = (function() {
 			success: function(returnData) {
 				window.fcwp_main.fcwp_embedChartCode = returnData;
 				returnData = "<!DOCTYPE html><html><head></head><body>"+returnData+"</body></html>";
+				jQuery("#fcwp_preview object").css({
+					"width" : (parseInt(fcData.chartWidth)+25)+"px",
+					"height" : (parseInt(fcData.chartHeight)+25)+"px"
+				});
 				jQuery("#fcwp_preview object").attr('data',"data:text/html;charset=utf-8,"+escape(returnData));
 				jQuery("#fcwp_step1").fadeOut(function(){
 					jQuery("#fcwp_preview").fadeIn();
