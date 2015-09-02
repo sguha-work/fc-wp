@@ -48,6 +48,73 @@ window.fcwp_main.validateChartForm = (function() {
 			"border" : "1px solid green"
 		});
 	}
+	if(jQuery.trim(jQuery("#fcwp_chartId").val())=="") {
+		alert("Please enter unique chart id");
+		jQuery("#fcwp_chartId").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_chartId").css({
+			"border" : "1px solid green"
+		});
+	}
+	if(jQuery.trim(jQuery("#fcwp_chartWidth").val())!==""&&!isNaN(jQuery("#fcwp_chartWidth").val())) {
+		jQuery("#fcwp_chartWidth").css({
+			"border" : "1px solid green"
+		});
+
+	} else {
+		alert("Please enter chart width in number");
+		jQuery("#fcwp_chartWidth").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	}
+	if(jQuery.trim(jQuery("#fcwp_chartHeight").val())!==""&&!isNaN(jQuery("#fcwp_chartHeight").val())) {
+		jQuery("#fcwp_chartHeight").css({
+			"border" : "1px solid green"
+		});
+	} else {
+		alert("Please enter chart height in number");
+		jQuery("#fcwp_chartHeight").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	}
+	if(jQuery.trim(jQuery("#fcwp_chartContainerId").val())=="") {
+		alert("Please enter chart container div id");
+		jQuery("#fcwp_chartContainerId").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_chartContainerId").css({
+			"border" : "1px solid green"
+		});
+	}
+	if(jQuery.trim(jQuery("#fcwp_chartDataType").val())=="") {
+		alert("Please select chart data type");
+		jQuery("#fcwp_chartDataType").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_chartDataType").css({
+			"border" : "1px solid green"
+		});
+	}
+	if(jQuery.trim(jQuery("#fcwp_data").val())=="") {
+		alert("Please select chart data");
+		jQuery("#fcwp_data").focus().css({
+			"border" : "1px solid red"
+		});
+		return 0;
+	} else {
+		jQuery("#fcwp_data").css({
+			"border" : "1px solid green"
+		});
+	}
 	return 1;
 });
 
