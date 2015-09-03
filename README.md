@@ -18,7 +18,8 @@ This section describes how to install the plugin and get it working.
 * After installing the plugin you have to activate the plugin by moving on to the plugins page of wp-admin and clicking on activate of "Fusioncharts For Wordpress" plugin
 * After activating it you will found "Create fusionchart for this Page/Post" button on every edit post/page page of wordpress admin panel like screenshot 1
 * Clicking on the button will open a Fusionchart settings form like screenshot2, You have to fill up the form with desired values. All form element contains default values, Event there is sample JSON data which can be used to populate basic charts for more example on fusioncharts visit "http://www.fusioncharts.com/charts/"
-* After the form is filled up you may preview the chart as shown in screenshot 3. If any more changes needed you may go back to settings page or you may go to next step to embed the chart
+* After the form is filled up you may preview the chart as shown in screenshot 3. If any more changes needed you may go back to settings page or you may go to next step to embed the chart.
+	* If there is any error in chart data the chart will not be populated
 * In the last step you will found a text area having raw html and javascript code like screenshot 4, you have to copy the entire code and then go to text mode editor of the page & post and paste the code where you like to see Fusionchart.
 * Update the page/post and see interactive javascript charts in your page/post
 
