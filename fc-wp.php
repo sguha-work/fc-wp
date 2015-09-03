@@ -1,15 +1,15 @@
 <?php
 /**
- * @package Fc-wp
+ * @package fc-wp
  * @version 0.1
  */
 /*
-Plugin Name: Fusionchart For Wordpress
+Plugin Name: Fusioncharts For Wordpress
 Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: This is a plugin of FusionCharts for wordpress to add interactive chart in your post or page
-Author: Sahasrangshu Guha
+Description: This is a plugin of FusionCharts for wordpress to add interactive javascript charts in your wordpress site's post or page
+Author: Sahasrangshu Guha, Uttam Thapa
 Version: 0.1
-Author URI: 
+Author URI: https://github.com/sguha-work/, https://github.com/ukthapa/
 */
 function checkPage() {
 	$referPage = $_SERVER['PHP_SELF'];
@@ -18,14 +18,12 @@ function checkPage() {
 	}
 	return 0;
 }
-// This just echoes the chosen line
+
 function fcWpShowButton() {
 	if(checkPage()) {
 		echo "<a href='javascript:void(0)' id='fcwp_button'><img height='20' width='20' src='".plugins_url('assets/images/fc.png', __FILE__)."'>&nbsp;&nbsp;&nbsp;Create fusionchart for this Page/Post</a>";
 	}
 }
-
-// Now we set that function up to execute when the admin_notices action is called
 add_action( 'admin_notices', 'fcWpShowButton' );
 
 function addButtonCss() {
@@ -34,7 +32,6 @@ function addButtonCss() {
 		echo "<link rel='stylesheet' href='".plugins_url('assets/css/form-style.css', __FILE__)."'/>";
 	}
 }
-
 add_action( 'admin_head', 'addButtonCss' );
 
 function addJs() {
