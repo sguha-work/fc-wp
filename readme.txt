@@ -60,8 +60,9 @@ License: GPLv3
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
-	Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
-
+		Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
+	= Can I use a paid version of FusionChart with this product
+		Well obviously you can, you just have to unzip all the files got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
 == Donations ==
 	Well this product is free to use and always will be. Your support, suggestion to improve, issues reporting will be enough
 	for us. To report issues please visit https://github.com/sguha-work/fc-wp/issues
