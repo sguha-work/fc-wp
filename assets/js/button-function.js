@@ -1,8 +1,10 @@
 jQuery(document).ready(function(){
 	
 	var displayForm = (function() {
-			var formHTML = jQuery("#fcwp_formTemplate").html();
-			jQuery('html,body').append(formHTML);
+			if(!jQuery("#fcwp_popupDiv").length) {
+				var formHTML = jQuery("#fcwp_formTemplate").html();
+				jQuery('html,body').append(formHTML);	
+			}
 			bindEvents();
 			window.fcwp_main.loadFcChartTypes();
 			window.fcwp_main.bindFormElementEvents();
