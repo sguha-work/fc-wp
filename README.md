@@ -1,5 +1,5 @@
 # Fusioncharts For Wordpress
-	This plugin helps you to embed cool javascript charts inside your page or post. For charting it use Fusioncharts,The
+This plugin helps you to embed cool javascript charts inside your page or post. For charting it use Fusioncharts,The
 leading javascript data viz solution availeble in market. Inside edit page of any page and post you will find a button
 clicking on which you will have a form to fill up which is basically settings for fusioncharts. Fill up the form and
 then preview it before embed. If the chart need changes then you may again go back to settings and review the settings.
