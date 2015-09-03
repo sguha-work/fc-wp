@@ -14,9 +14,9 @@ in deligted form.
 ### Installing
 This section describes how to install the plugin and get it working.
 
-1:	Upload the folder 'fc-wp' to the '/wp-content/plugins/' directory
-2:	Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
-3:	Inside any page/post's edit page you will see a button named "Create fusionchart for this Page/Post"
+1.	Upload the folder 'fc-wp' to the '/wp-content/plugins/' directory
+2.	Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
+3.	Inside any page/post's edit page you will see a button named "Create fusionchart for this Page/Post"
 
 ### Screenshots
 1: Here is the button on the top right side of the edit page of a wordpress page to start
