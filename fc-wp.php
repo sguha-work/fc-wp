@@ -1,15 +1,15 @@
 <?php
 /**
- * @package Fc-wp
+ * @package fc-wp
  * @version 0.1
  */
 /*
-Plugin Name: Fusionchart For Wordpress
+Plugin Name: Fusioncharts For Wordpress
 Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: This is a plugin of FusionCharts for wordpress to add interactive chart in your post or page
+Description: This is a plugin of FusionCharts for wordpress to add interactive javascript charts in your wordpress site's post or page
 Author: Sahasrangshu Guha, Uttam Thapa
 Version: 0.1
-Author URI: 
+Author URI: https://github.com/sguha-work/, https://github.com/ukthapa/
 */
 function checkPage() {
 	$referPage = $_SERVER['PHP_SELF'];
