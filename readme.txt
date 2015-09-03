@@ -30,17 +30,19 @@ License: GPLv3
 	2. Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
 	3. Inside any page/post's edit page you will see a button named "Create fusionchart for this Page/Post"
 
+== Usage guide ==
+
 == Upgrade Notice ==
 	= 0.1 =
 		This version is based on Fusioncharts v3.8.0, we will update the plugin as New version of fusionchart released and/or
 		bug fix and improvement of the plugin itself
 
 == Screenshots ==
-	1./assets/screenshot-1.png
-	2./assets/screenshot-2.png
-	3./assets/screenshot-3.png
-	4./assets/screenshot-4.png
-	5./assets/screenshot-5.png
+	1. /assets/screenshot-1.png
+	2. /assets/screenshot-2.png
+	3. /assets/screenshot-3.png
+	4. /assets/screenshot-4.png
+	5. /assets/screenshot-5.png
 
 == Changelog ==
 	This is the first version of the plugin so.........
