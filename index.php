@@ -21,7 +21,7 @@ function checkPage() {
 // This just echoes the chosen line
 function fcWpShowButton() {
 	if(checkPage()) {
-		echo "<a href='javascript:void(0)' id='fcwp_button'>Create fusionchart for this Page/Post</a>";
+		echo "<a href='javascript:void(0)' id='fcwp_button'><img height='20' width='20' src='".plugins_url('assets/images/fc.png', __FILE__)."'>&nbsp;Create fusionchart for this Page/Post</a>";
 	}
 }
 
