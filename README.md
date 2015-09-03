@@ -50,5 +50,8 @@ This section describes how to install the plugin and get it working.
 5. Here is the sample page with Fusionchart
 	![Screenshot5](http://i.imgur.com/oB8rDdo.png)
 
+### Upcoming features
+1. Adding support for taking JSON/XML data from given URL
+2. Improvment in the UI
 
 ###If any issue found feel free to drop a mail at sguha1988.life@gmail.com
