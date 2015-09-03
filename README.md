@@ -50,6 +50,12 @@ This section describes how to install the plugin and get it working.
 5. Here is the sample page with Fusionchart
 	![Screenshot5](http://i.imgur.com/oB8rDdo.png)
 
+### Frequently Asked Questions ==
+* What about FusionChart?
+	* Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
+* Can I use a paid version of FusionChart with this product
+	* Well obviously you can, you just have to unzip all the files got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
+
 ### Upcoming features
 1. Adding support for taking JSON/XML data from given URL
 2. Improvment in the UI
