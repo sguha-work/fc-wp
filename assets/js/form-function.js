@@ -14,14 +14,25 @@ window.fcwp_main.populateDataSection = (function(element) {
 			case "json":
 				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
 				jQuery('<textarea id="fcwp_data" data-type="json">[{"label":"Bakersfield Central","value":"880000"},{"label":"Garden Groove harbour","value":"730000"},{"label":"Los Angeles Topanga","value":"590000"},{"label":"Compton-Rancho Dom","value":"520000"},{"label":"Daly City Serramonte","value":"330000"}]</textarea>').insertAfter( jQuery(element) );
+				jQuery("p",jQuery(element).parent()[0]).css({
+					"display": "none"
+				});
 			break;
 			case "xml":
 				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
 				jQuery('<textarea id="fcwp_data" data-type="xml"></textarea>').insertAfter( jQuery(element) );
+				jQuery("p",jQuery(element).parent()[0]).css({
+					"display": "none"
+				});
 			break;
 		}
 	} else {
-		if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
+		if(jQuery("#fcwp_data").length){
+			jQuery("#fcwp_data").remove();
+			jQuery("p",jQuery(element).parent()[0]).css({
+				"display": "block"
+			});
+		}
 	}
 });
 

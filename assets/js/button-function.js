@@ -12,8 +12,8 @@ jQuery(document).ready(function(){
 		}),
 		unloadPopupBox = (function () {    // TO Unload the Popupbox
 	        jQuery('#fcwp_popupDiv').fadeOut("slow");
-	        jQuery("#fcwp_container").css({ // this is just for style        
-	            "opacity": "1"  
+	        jQuery("#fcwp_popupDiv").prev().css({ // this is just for style        
+	            "display": "none"  
 	        }); 
 	    }),
 	    bindEvents = (function(){
@@ -27,8 +27,10 @@ jQuery(document).ready(function(){
 	    }),    
         loadPopupBox = (function() {    // To Load the Popupbox
 	        jQuery('#fcwp_popupDiv').fadeIn("slow");
-	        jQuery("#fcwp_container").css({ // this is just for style
-	            "opacity": "0.3"  
+	        jQuery("#fcwp_popupDiv").prev().css({ // this is just for style
+	            "display": "block",
+	            "opacity": "0.3",
+	            "background-color": "#C4E1FF"
 	        });         
 	    });
 
