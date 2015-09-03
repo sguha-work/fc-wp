@@ -1,19 +1,19 @@
 jQuery(document).ready(function(){
 	
 	var displayForm = (function() {
-			if(!jQuery("#fcwp_popupDiv").length) {
-				var formHTML = jQuery("#fcwp_formTemplate").html();
-				jQuery('html,body').append(formHTML);	
-			}
+			var formHTML = jQuery("#fcwp_formTemplate").html();
+			jQuery('html,body').append(formHTML);	
 			bindEvents();
 			window.fcwp_main.loadFcChartTypes();
 			window.fcwp_main.bindFormElementEvents();
 			loadPopupBox();
 		}),
 		unloadPopupBox = (function () {    // TO Unload the Popupbox
-	        jQuery('#fcwp_popupDiv').fadeOut("slow");
-	        jQuery("#fcwp_popupDiv").prev().css({ // this is just for style        
-	            "display": "none"  
+	        jQuery('#fcwp_popupDiv').fadeOut("slow", function() {
+	        	jQuery("#fcwp_popupDiv").prev().css({ // this is just for style        
+		            "display": "none"  
+		        });
+		        jQuery("#fcwp_popupDiv").remove();
 	        }); 
 	    }),
 	    bindEvents = (function(){
