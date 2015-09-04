@@ -1,9 +1,10 @@
-# Fusioncharts For Wordpress
+
+# FC-WP (Fusioncharts For Wordpress)
 
 * Contributors: Sahasrangshu Guha, Uttam Thapa
 * Tags: wp, chart, javascript, php, json, data visualization
 * Author URI: https://github.com/sguha-work/, https://github.com/ukthapa/
-* Author: Sahasrangshu Guha, Uttam Thapa
+* Author: Sahasrangshu Guha
 * Requires at least: 2.3
 * Tested up to: 4.0
 * Stable tag: 0.1
@@ -22,20 +23,20 @@ in delighted form.
 This section describes how to install the plugin and get it working.
 
 1.	Upload the folder 'fc-wp' to the '/wp-content/plugins/' directory
-2.	Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
-3.	Inside any page/post's edit page you will see a button named "Create fusionchart for this Page/Post"
+2.	Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "FC-WP"
+3.	Inside any page/post's edit page you will see a button named "Create FusionChart for this Page/Post"
 
 ### Usage Guide
 * After installing the plugin you have to activate the plugin by moving on to the plugins page of wp-admin and clicking on activate of "Fusioncharts For Wordpress" plugin
-* After activating it you will found "Create fusionchart for this Page/Post" button on every edit post/page page of wordpress admin panel like screenshot 1
-* Clicking on the button will open a Fusionchart settings form like screenshot2, You have to fill up the form with desired values. All form element contains default values, Event there is sample JSON data which can be used to populate basic charts for more example on fusioncharts visit "http://www.fusioncharts.com/charts/"
+* After activating it you will found "Create fusionchart for this Page/Post" button on every edit post/page page of Wordpress admin panel like screenshot 1
+* Clicking on the button will open a Fusionchart settings form like screenshot 2, You have to fill up the form with desired values. All form element contains default values, Event there is sample JSON data which can be used to populate basic charts for more example on FusionCharts visit "http://www.fusioncharts.com/charts/"
 * After the form is filled up you may preview the chart as shown in screenshot 3. If any more changes needed you may go back to settings page or you may go to next step to embed the chart.
 	* If there is any error in chart data the chart will not be populated
-* In the last step you will found a text area having raw html and javascript code like screenshot 4, you have to copy the entire code and then go to text mode editor of the page & post and paste the code where you like to see Fusionchart.
-* Update the page/post and see interactive javascript charts in your page/post
+* In the last step you will found a text area having raw html and JavaScript code like screenshot 4, you have to copy the entire code and then go to text mode editor of the page & post and paste the code where you like to see Fusionchart.
+* Update the page/post and see interactive JavaScript charts in your page/post
 
 ### Screenshots
-1. Here is the button on the top right side of the edit page of a wordpress page to start
+1. Here is the button on the top right side of the edit page of a Wordpress page to start
 	![Screenshot1](http://i.imgur.com/GRCGemK.png)
 	
 2. Here is how the chart settings form looks like
@@ -54,10 +55,10 @@ This section describes how to install the plugin and get it working.
 * What about FusionChart?
 	* Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
 * Can I use a paid version of FusionChart with this product
-	* Well obviously you can, you just have to unzip all the files got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
+	* Well obviously you can, you just have to unzip all the files you got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
 
 ### Upcoming features
 1. Adding support for taking JSON/XML data from given URL
-2. Improvment in the UI
+2. Improvement in the UI
 
 ###If any issue found feel free to drop a mail at sguha1988.life@gmail.com
