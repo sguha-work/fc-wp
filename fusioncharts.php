@@ -25,10 +25,8 @@
             isset($height) ? $this->constructorOptions['height'] = $height : '';
             isset($renderAt) ? $this->constructorOptions['renderAt'] = $renderAt : '';
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
-            //if(isset($dataFormat)&&$dataFormat!="jsonurl"&&$dataFormat!="xmlurl") {
-                isset($type) ? $this->constructorOptions['type'] = $type : '';
-                isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
-            //}
+            isset($type) ? $this->constructorOptions['type'] = $type : '';
+            isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
             isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
             $tempArray = array();
@@ -97,5 +95,5 @@
         );
     }
     
-    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();
+    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();die();
 ?>
