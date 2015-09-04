@@ -21,18 +21,16 @@
 
         // constructor
         function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
-            if(isset($dataFormat)&&$dataFormat!="jsonurl"&&$dataFormat!="xmlurl") {
+            isset($width) ? $this->constructorOptions['width'] = $width : '';
+            isset($height) ? $this->constructorOptions['height'] = $height : '';
+            isset($renderAt) ? $this->constructorOptions['renderAt'] = $renderAt : '';
+            isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
+            //if(isset($dataFormat)&&$dataFormat!="jsonurl"&&$dataFormat!="xmlurl") {
                 isset($type) ? $this->constructorOptions['type'] = $type : '';
                 isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
-                isset($width) ? $this->constructorOptions['width'] = $width : '';
-                isset($height) ? $this->constructorOptions['height'] = $height : '';
-                isset($renderAt) ? $this->constructorOptions['renderAt'] = $renderAt : '';
-                isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
-                isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
-            } else {
-                isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
-                isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
-            }
+            //}
+            isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
+            isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
             $tempArray = array();
             foreach($this->constructorOptions as $key => $value) {
                 if ($key === 'dataSource') {
@@ -95,15 +93,8 @@
             $_POST['chartHeight'], 
             $_POST['chartContainerId'], 
             $_POST['chartDataType'], 
-            '{  
-               "chart":
-               {  
-                  "caption":"'.$_POST['chartTitle'].'",
-                  "subCaption":"",
-                  "theme":"ocean"
-               },
-               "dataSource":"'.$_POST['chartData'].'"
-        }');
+            $_POST['chartData']
+        );
     }
     
     echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();
