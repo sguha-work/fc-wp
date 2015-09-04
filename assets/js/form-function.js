@@ -11,6 +11,7 @@ window.fcwp_main.populateDataSection = (function(element) {
 	var value = jQuery.trim(jQuery(element).val());
 	if(value != "") {
 		switch(value) {
+
 			case "json":
 				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
 				jQuery('<textarea id="fcwp_data" data-type="json">[{"label":"Bakersfield Central","value":"880000"},{"label":"Garden Groove harbour","value":"730000"},{"label":"Los Angeles Topanga","value":"590000"},{"label":"Compton-Rancho Dom","value":"520000"},{"label":"Daly City Serramonte","value":"330000"}]</textarea>').insertAfter( jQuery(element) );
@@ -18,9 +19,26 @@ window.fcwp_main.populateDataSection = (function(element) {
 					"display": "none"
 				});
 			break;
+
 			case "xml":
 				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
 				jQuery('<textarea id="fcwp_data" data-type="xml"></textarea>').insertAfter( jQuery(element) );
+				jQuery("p",jQuery(element).parent()[0]).css({
+					"display": "none"
+				});
+			break;
+
+			case "jsonurl":
+				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
+				jQuery('<input type="text" placeholder="Enter JSON URL here" id="fcwp_data"/>').insertAfter( jQuery(element) );
+				jQuery("p",jQuery(element).parent()[0]).css({
+					"display": "none"
+				});
+			break;
+
+			case "xmlurl":
+				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
+				jQuery('<input type="text" placeholder="Enter XML URL here" id="fcwp_data"/>').insertAfter( jQuery(element) );
 				jQuery("p",jQuery(element).parent()[0]).css({
 					"display": "none"
 				});
@@ -149,8 +167,8 @@ window.fcwp_main.previewTheChart = (function() {
 			fcData.chartWidth = 400;
 		}	
 		jQuery.ajax({
-			url : window.fcwp_main.fcwp_pluginPath+"fusioncharts.php",
-			data : fcData,
+			url: window.fcwp_main.fcwp_pluginPath+"fusioncharts.php",
+			data: fcData,
 			type: "POST",
 			success: function(returnData) {
 				window.fcwp_main.fcwp_embedChartCode = returnData;
@@ -183,6 +201,9 @@ window.fcwp_main.backToChartSettings = (function() {
 
 window.fcwp_main.bindFormElementEvents = (function() {
 	jQuery("#fcwp_chartDataType").unbind('change').on('change', function(event){
+		if(jQuery(event.currentTarget).val().indexOf("url")!=-1) {
+			alert("If you select JSON/XML url as data type all the previous given data for chart may be overwritten by the url's data");
+		}
 		window.fcwp_main.populateDataSection(event.currentTarget);
 	});
 	jQuery("#fcwp_previewButton").unbind('click').on('click', function(event){
@@ -194,5 +215,5 @@ window.fcwp_main.bindFormElementEvents = (function() {
 	jQuery("#fcwp_embedChartButton").unbind('click').on('click', function() {
 		window.fcwp_main.showEmbedCode();
 	});
-})
+});
 

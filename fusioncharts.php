@@ -21,14 +21,14 @@
 
         // constructor
         function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
-            isset($type) ? $this->constructorOptions['type'] = $type : '';
-            isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
             isset($width) ? $this->constructorOptions['width'] = $width : '';
             isset($height) ? $this->constructorOptions['height'] = $height : '';
             isset($renderAt) ? $this->constructorOptions['renderAt'] = $renderAt : '';
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
+            isset($type) ? $this->constructorOptions['type'] = $type : '';
+            isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
+            isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
             isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
-
             $tempArray = array();
             foreach($this->constructorOptions as $key => $value) {
                 if ($key === 'dataSource') {
@@ -58,14 +58,16 @@
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
         function render() {
-           $renderHTML = preg_replace('/__chartId__/', $this->constructorOptions['id'], $this->renderTemplate);
+           $renderHTML = preg_replace('/__chartId__/', isset($this->constructorOptions['id'])?$this->constructorOptions['id']:"fc_chart_1", $this->renderTemplate);
            return $this->totalHtml.$renderHTML;
         }
 
     }
 ?>
 <?php
-    $chart = new FusionCharts(
+    $chart;
+    if(isset($_POST['chartDataType'])&&$_POST['chartDataType']!="jsonurl"&&$_POST['chartDataType']!="xmlurl") {
+        $chart = new FusionCharts(
             $_POST['chartType'], 
             $_POST['chartId'], 
             $_POST['chartWidth'], 
@@ -80,6 +82,18 @@
                   "theme":"ocean"
                },
                "data":'.$_POST['chartData'].'
-        }');
-    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();
+        }');    
+    } else {
+        $chart = new FusionCharts(
+            $_POST['chartType'], 
+            $_POST['chartId'], 
+            $_POST['chartWidth'], 
+            $_POST['chartHeight'], 
+            $_POST['chartContainerId'], 
+            $_POST['chartDataType'], 
+            $_POST['chartData']
+        );
+    }
+    
+    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();die();
 ?>
