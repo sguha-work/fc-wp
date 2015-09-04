@@ -26,13 +26,13 @@ function fcWpShowButton() {
 }
 add_action( 'admin_notices', 'fcWpShowButton' );
 
-function addButtonCss() {
+function addCss() {
 	if(checkPage()) {
 		echo "<link rel='stylesheet' href='".plugins_url('assets/css/button-style.css', __FILE__)."'/>";
 		echo "<link rel='stylesheet' href='".plugins_url('assets/css/form-style.css', __FILE__)."'/>";
 	}
 }
-add_action( 'admin_head', 'addButtonCss' );
+add_action( 'admin_head', 'addCss' );
 
 function addJs() {
 	if(checkPage()) {
