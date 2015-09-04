@@ -7,8 +7,8 @@ Author URI: https://github.com/sguha-work/, https://github.com/ukthapa/
 Author: Sahasrangshu Guha, Uttam Thapa
 Requires at least: 2.3
 Tested up to: 4.0
-Stable tag: 0.1
-Version: 0.1 
+Stable tag: 0.2
+Version: 0.2 
 License: GPLv3
 
 
@@ -39,7 +39,7 @@ License: GPLv3
 	* In the last step you will found a text area having raw html and JavaScript code like screenshot 4, you have to copy the entire code and then go to text mode editor of the page & post and paste the code where you like to see FusionChart.
 	* Update the page/post and see interactive JavaScript charts in your page/post
 == Upgrade Notice ==
-	= 0.1 =
+	= 0.2 =
 		This version is based on FusionCharts v3.8.0, we will update the plugin as New version of FusionChart released and/or
 		bug fix and improvement of the plugin itself
 
@@ -51,12 +51,11 @@ License: GPLv3
 	5. /assets/screenshot-5.png
 
 == Upcoming features ==
-	1. Adding support for taking JSON/XML data from given URL
-	2. Improvement in the UI
+	1. Improvement in the UI
 
 
 == Change-log ==
-	This is the first version of the plugin so.........
+	1. Added the feature to have data from JSON/XML url.
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
