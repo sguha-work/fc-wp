@@ -7,8 +7,8 @@
 * Author: Sahasrangshu Guha
 * Requires at least: 2.3
 * Tested up to: 4.0
-* Stable tag: 0.1
-* Version: 0.1 
+* Stable tag: 0.2
+* Version: 0.2 
 * License: GPLv3
 
 This plugin helps you to embed cool JavaScript charts inside your page or post. For charting it use Fusioncharts,The
@@ -58,7 +58,9 @@ This section describes how to install the plugin and get it working.
 	* Well obviously you can, you just have to unzip all the files you got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
 
 ### Upcoming features
-1. Adding support for taking JSON/XML data from given URL
-2. Improvement in the UI
+1. Improvement in the UI
 
-###If any issue found feel free to drop a mail at sguha1988.life@gmail.com
+### Change-log
+1. Added the feature to have data from JSON/XML url.
+
+### If any issue found or wish to request improvements feel free to drop a mail at sguha1988.life@gmail.com
