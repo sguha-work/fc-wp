@@ -1,6 +1,8 @@
 <?php
 
-    class FusionCharts {
+    require_once('../../../wp-load.php');
+
+    class fcwp_FusionCharts {
         private $totalHtml;
         private $constructorOptions = array();
 
@@ -28,7 +30,7 @@
             isset($type) ? $this->constructorOptions['type'] = $type : '';
             isset($id) ? $this->constructorOptions['id'] = $id : 'php-fc-'.time();
             isset($dataFormat) ? $this->constructorOptions['dataFormat'] = $dataFormat : '';
-            isset($dataSource) ? $this->constructorOptions['dataSource'] = $dataSource : '';
+            isset($dataSource) ? $this->constructorOptions['dataSource'] = stripslashes($dataSource) : '';
             $tempArray = array();
             foreach($this->constructorOptions as $key => $value) {
                 if ($key === 'dataSource') {
@@ -57,7 +59,7 @@
 
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
-        function render() {
+        function fcwp_render() {
            $renderHTML = preg_replace('/__chartId__/', isset($this->constructorOptions['id'])?$this->constructorOptions['id']:"fc_chart_1", $this->renderTemplate);
            return $this->totalHtml.$renderHTML;
         }
@@ -65,35 +67,35 @@
     }
 ?>
 <?php
-    $chart;
-    if(isset($_POST['chartDataType'])&&$_POST['chartDataType']!="jsonurl"&&$_POST['chartDataType']!="xmlurl") {
-        $chart = new FusionCharts(
-            $_POST['chartType'], 
-            $_POST['chartId'], 
-            $_POST['chartWidth'], 
-            $_POST['chartHeight'], 
-            $_POST['chartContainerId'], 
-            $_POST['chartDataType'], 
+    $fcwp_chart;
+    if(isset($_POST['chartDataType'])&&sanitize_text_field($_POST['chartDataType'])!="jsonurl"&&sanitize_text_field($_POST['chartDataType'])!="xmlurl") {
+        $fcwp_chart = new fcwp_FusionCharts(
+            sanitize_text_field($_POST['chartType']), 
+            sanitize_text_field($_POST['chartId']), 
+            sanitize_text_field($_POST['chartWidth']), 
+            sanitize_text_field($_POST['chartHeight']), 
+            sanitize_text_field($_POST['chartContainerId']), 
+            sanitize_text_field($_POST['chartDataType']), 
             '{  
                "chart":
                {  
-                  "caption":"'.$_POST['chartTitle'].'",
+                  "caption":"'.sanitize_text_field($_POST['chartTitle']).'",
                   "subCaption":"",
                   "theme":"ocean"
                },
-               "data":'.$_POST['chartData'].'
+               "data":'.sanitize_text_field($_POST['chartData']).'
         }');    
     } else {
-        $chart = new FusionCharts(
-            $_POST['chartType'], 
-            $_POST['chartId'], 
-            $_POST['chartWidth'], 
-            $_POST['chartHeight'], 
-            $_POST['chartContainerId'], 
-            $_POST['chartDataType'], 
-            $_POST['chartData']
+        $fcwp_chart = new fcwp_FusionCharts(
+            sanitize_text_field($_POST['chartType']), 
+            sanitize_text_field($_POST['chartId']), 
+            sanitize_text_field($_POST['chartWidth']), 
+            sanitize_text_field($_POST['chartHeight']), 
+            sanitize_text_field($_POST['chartContainerId']), 
+            sanitize_text_field($_POST['chartDataType']), 
+            sanitize_text_field($_POST['chartData'])
         );
     }
     
-    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();die();
+    echo "<div id='".sanitize_text_field($_POST['chartContainerId'])."'></div><script type='text/javascript' src='".sanitize_text_field($_POST['filePath'])."assets/fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();die();
 ?>
