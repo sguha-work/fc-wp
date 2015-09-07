@@ -68,7 +68,7 @@
 ?>
 <?php
     $fcwp_chart;
-    if(isset($_POST['chartDataType'])&&$_POST['chartDataType']!="jsonurl"&&$_POST['chartDataType']!="xmlurl") {
+    if(isset($_POST['chartDataType'])&&sanitize_text_field($_POST['chartDataType'])!="jsonurl"&&sanitize_text_field($_POST['chartDataType'])!="xmlurl") {
         $fcwp_chart = new fcwp_FusionCharts(
             sanitize_text_field($_POST['chartType']), 
             sanitize_text_field($_POST['chartId']), 
