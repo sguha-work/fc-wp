@@ -1,6 +1,6 @@
 <?php
 
-    class FusionCharts {
+    class fcwp_FusionCharts {
         private $totalHtml;
         private $constructorOptions = array();
 
@@ -57,7 +57,7 @@
 
         // render the chart created
         // It prints a script and calls the FusionCharts javascript render method of created chart
-        function render() {
+        function fcwp_render() {
            $renderHTML = preg_replace('/__chartId__/', isset($this->constructorOptions['id'])?$this->constructorOptions['id']:"fc_chart_1", $this->renderTemplate);
            return $this->totalHtml.$renderHTML;
         }
@@ -65,9 +65,9 @@
     }
 ?>
 <?php
-    $chart;
+    $fcwp_chart;
     if(isset($_POST['chartDataType'])&&$_POST['chartDataType']!="jsonurl"&&$_POST['chartDataType']!="xmlurl") {
-        $chart = new FusionCharts(
+        $fcwp_chart = new fcwp_FusionCharts(
             $_POST['chartType'], 
             $_POST['chartId'], 
             $_POST['chartWidth'], 
@@ -84,7 +84,7 @@
                "data":'.$_POST['chartData'].'
         }');    
     } else {
-        $chart = new FusionCharts(
+        $fcwp_chart = new FusionCharts(
             $_POST['chartType'], 
             $_POST['chartId'], 
             $_POST['chartWidth'], 
@@ -95,5 +95,5 @@
         );
     }
     
-    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$chart->render();die();
+    echo "<div id='".$_POST['chartContainerId']."'></div><script type='text/javascript' src='".$_POST['filePath']."assets/fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();die();
 ?>

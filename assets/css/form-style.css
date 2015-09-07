@@ -51,18 +51,18 @@
 }
 
 
-#fcwp_popupDiv  .form-group {
+#fcwp_popupDiv  .fcwp_form-group {
 	width: 100%;
 	margin-bottom: 15px;
 	
 }
 
-#fcwp_popupDiv .row {
+#fcwp_popupDiv .fcwp_row {
 	width: 100%;
 	margin: 0 -10px;
 }
 
-#fcwp_popupDiv .row:after {
+#fcwp_popupDiv .fcwp_row:after {
 	visibility: hidden;
 	display: block;
 	font-size: 0;
@@ -72,22 +72,22 @@
 }
 
 
-#fcwp_popupDiv .grid-1, #fcwp_popupDiv .grid-2 {
+#fcwp_popupDiv .fcwp_grid-1, #fcwp_popupDiv .fcwp_grid-2 {
 	box-sizing: border-box;
 	padding: 0 10px; 
 	float: left;
 }
 
-#fcwp_popupDiv .grid-1 {
+#fcwp_popupDiv .fcwp_grid-1 {
 	width: 100%;
 }
 
-#fcwp_popupDiv .grid-2 {
+#fcwp_popupDiv .fcwp_grid-2 {
 	width: 50%;
 }
 
 
-#fcwp_popupDiv  .form-group  label {
+#fcwp_popupDiv  .fcwp_form-group  label {
 	width: 100%;
 	display: block;
 	box-sizing: border-box;
@@ -96,7 +96,7 @@
 	color: #9D9D9F;
 }
 
-#fcwp_popupDiv  .form-group  input, #fcwp_popupDiv  .form-group  select {
+#fcwp_popupDiv  .fcwp_form-group  input, #fcwp_popupDiv  .fcwp_form-group  select {
 	width: 100%;
 	box-sizing: border-box;
 	color: #737373;
@@ -136,7 +136,7 @@
 
 
 @media (max-width: 1024px) {
-  #fcwp_popupDiv .grid-2 {
+  #fcwp_popupDiv .fcwp_grid-2 {
     width: 100%;
   }
 }
