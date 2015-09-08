@@ -1,4 +1,5 @@
 <?php
+	
 	function fcwp_checkPage() {
 		$referPage = $_SERVER['PHP_SELF'];
 		if(strpos($referPage,"post.php")!==false || strpos($referPage,"post-new.php")!==false) {
@@ -12,6 +13,7 @@
 			echo "<a href='javascript:void(0)' id='fcwp_button'><img height='20' width='20' src='".plugins_url('assets/images/fc.png', __FILE__)."'>&nbsp;&nbsp;&nbsp;Create fusionchart for this Page/Post</a>";
 		}
 	}
+
 	function fcwp_addCss() {
 		if(fcwp_checkPage()) {
 			wp_enqueue_style(
@@ -24,6 +26,7 @@
 			);
 		}
 	}
+
 	function fcwp_addScript() {
 		if(fcwp_checkPage()) {
 			echo "<script type='text/javascript'>window.fcwp_main = {};fcwp_main.fcwp_pluginPath = '".plugins_url('assets/',__FILE__)."'.split('assets/')[0];</script>";
@@ -41,11 +44,13 @@
 			);
 		}
 	}
+
 	function fcwp_addFormTemplate() {
 		if(fcwp_checkPage()) {
 			echo "<script type='text/html' id='fcwp_formTemplate'>".file_get_contents(plugins_url('assets/html/form.html', __FILE__))."</script>";	
 		}	
 	}
+
 	function fcwp_getChart() {
 		include_once 'fusioncharts.php';
 		$fcwp_chart;
@@ -77,8 +82,8 @@
 	            sanitize_text_field($_POST['chartData'])
 	        );
 	    }
-	    
 	    echo "<div id='".sanitize_text_field($_POST['chartContainerId'])."'></div><script type='text/javascript' src='".plugins_url('assets/',__FILE__)."fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();
 		wp_die();
 	}
+
 ?>
