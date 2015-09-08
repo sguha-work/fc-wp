@@ -97,5 +97,5 @@
         );
     }
     
-    echo "<div id='".sanitize_text_field($_POST['chartContainerId'])."'></div><script type='text/javascript' src='".sanitize_text_field($_POST['filePath'])."assets/fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();die();
+    echo "<div id='".sanitize_text_field($_POST['chartContainerId'])."'></div><script type='text/javascript' src='".plugins_url('assets/',__FILE__)."fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();die();
 ?>

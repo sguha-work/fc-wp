@@ -158,7 +158,6 @@ window.fcwp_main.previewTheChart = (function() {
 				chartContainerId : jQuery("#fcwp_chartContainerId").val(),
 				chartDataType : jQuery("#fcwp_chartDataType").val(),
 				chartData : jQuery("#fcwp_data").val(),
-				filePath : window.fcwp_main.fcwp_pluginPath
 			};
 		if(parseInt(fcData.chartWidth)>400){
 			fcData.chartWidth = 400;
