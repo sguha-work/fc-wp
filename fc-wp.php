@@ -30,21 +30,36 @@ add_action( 'admin_notices', 'fcwp_showButton' );
 
 function fcwp_addCss() {
 	if(fcwp_checkPage()) {
-		echo "<link rel='stylesheet' href='".plugins_url('assets/css/button-style.css', __FILE__)."'/>";
-		echo "<link rel='stylesheet' href='".plugins_url('assets/css/form-style.css', __FILE__)."'/>";
+		wp_enqueue_style(
+			'button-style',
+			plugins_url('assets/css/button-style.css', __FILE__)	
+		);
+		wp_enqueue_style(
+			'form-style',
+			plugins_url('assets/css/form-style.css', __FILE__)	
+		);
 	}
 }
 add_action( 'admin_head', 'fcwp_addCss' );
 
-function fcwp_addJs() {
+function fcwp_addScript() {
 	if(fcwp_checkPage()) {
 		echo "<script type='text/javascript'>window.fcwp_main = {};fcwp_main.fcwp_pluginPath = '".plugins_url('assets/',__FILE__)."'.split('assets/')[0];</script>";
-		echo "<script type='text/javascript' src=".plugins_url('assets/js/chart-types.js', __FILE__)."></script>";
-		echo "<script type='text/javascript' src=".plugins_url('assets/js/form-function.js', __FILE__)."></script>";	
-		echo "<script type='text/javascript' src=".plugins_url('assets/js/button-function.js', __FILE__)."></script>";
+		wp_enqueue_script(
+			'chart-type',
+			plugins_url( 'assets/js/chart-types.js' , __FILE__ )
+		);
+		wp_enqueue_script(
+			'form-function',
+			plugins_url( 'assets/js/form-function.js' , __FILE__ )
+		);
+		wp_enqueue_script(
+			'button-function',
+			plugins_url( 'assets/js/button-function.js' , __FILE__ )
+		);
 	}
 }
-add_action( 'admin_head', 'fcwp_addJs' );
+add_action( 'admin_head', 'fcwp_addScript' );
 
 function fcwp_addFormTemplate() {
 	if(fcwp_checkPage()) {
