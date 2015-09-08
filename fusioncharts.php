@@ -1,9 +1,8 @@
 <?php
 
-    //require_once('../../../wp-load.php');
-
     class fcwp_FusionCharts {
         private $totalHtml;
+
         private $constructorOptions = array();
 
         private $constructorTemplate = '
@@ -21,7 +20,6 @@
         </script>
         ';
 
-        // constructor
         function __construct($type, $id, $width = 400, $height = 300, $renderAt, $dataFormat, $dataSource) {
             isset($width) ? $this->constructorOptions['width'] = $width : '';
             isset($height) ? $this->constructorOptions['height'] = $height : '';
@@ -57,8 +55,6 @@
             $this->totalHtml = $newChartHTML;
         }
 
-        // render the chart created
-        // It prints a script and calls the FusionCharts javascript render method of created chart
         function fcwp_render() {
            $renderHTML = preg_replace('/__chartId__/', isset($this->constructorOptions['id'])?$this->constructorOptions['id']:"fc_chart_1", $this->renderTemplate);
            return $this->totalHtml.$renderHTML;
