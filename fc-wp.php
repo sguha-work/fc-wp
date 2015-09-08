@@ -67,4 +67,41 @@ function fcwp_addFormTemplate() {
 	}	
 }
 add_action( 'admin_head', 'fcwp_addFormTemplate' );
+
+function fcwp_getChart() {
+	include_once 'fusioncharts.php';
+	$fcwp_chart;
+    if(isset($_POST['chartDataType'])&&sanitize_text_field($_POST['chartDataType'])!="jsonurl"&&sanitize_text_field($_POST['chartDataType'])!="xmlurl") {
+        $fcwp_chart = new fcwp_FusionCharts(
+            sanitize_text_field($_POST['chartType']), 
+            sanitize_text_field($_POST['chartId']), 
+            sanitize_text_field($_POST['chartWidth']), 
+            sanitize_text_field($_POST['chartHeight']), 
+            sanitize_text_field($_POST['chartContainerId']), 
+            sanitize_text_field($_POST['chartDataType']), 
+            '{  
+               "chart":
+               {  
+                  "caption":"'.sanitize_text_field($_POST['chartTitle']).'",
+                  "subCaption":"",
+                  "theme":"ocean"
+               },
+               "data":'.sanitize_text_field($_POST['chartData']).'
+        }');    
+    } else {
+        $fcwp_chart = new fcwp_FusionCharts(
+            sanitize_text_field($_POST['chartType']), 
+            sanitize_text_field($_POST['chartId']), 
+            sanitize_text_field($_POST['chartWidth']), 
+            sanitize_text_field($_POST['chartHeight']), 
+            sanitize_text_field($_POST['chartContainerId']), 
+            sanitize_text_field($_POST['chartDataType']), 
+            sanitize_text_field($_POST['chartData'])
+        );
+    }
+    
+    echo "<div id='".sanitize_text_field($_POST['chartContainerId'])."'></div><script type='text/javascript' src='".plugins_url('assets/',__FILE__)."fc-assets/fusioncharts.js'></script>".$fcwp_chart->fcwp_render();
+	wp_die();
+}
+add_action( 'wp_ajax_get_chart', 'fcwp_getChart' );
 ?>
