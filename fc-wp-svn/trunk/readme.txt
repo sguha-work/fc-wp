@@ -4,7 +4,7 @@ Plugin URI: http://wordpress.org/plugins/fc-wp/
 Tags: wp, chart, javascript, php, json, data visualization
 Author: Sahasrangshu Guha
 Author URI: https://github.com/sguha-work/
-Contributor: Uttam Thapa
+Contributors: Sahasrangshu Guha, Uttam Thapa
 Contributor URI: https://github.com/ukthapa/
 Requires at least: 2.3
 Tested up to: 4.0
@@ -23,13 +23,9 @@ License: GPLv3
 	in delighted form.
 
 == Installation ==
-	This section describes how to install the plugin and get it working.
-
-	e.g.
-
-	1. Upload the folder 'fc-wp' to the '/wp-content/plugins/' directory
-	2. Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
-	3. Inside any page/post's edit page you will see a button named "Create FusionChart for this Page/Post"
+1. Upload the folder 'fc-wp' to the '/wp-content/plugins/' directory
+2. Activate the plugin through the 'Plugins' menu in WordPress, this plugin should be named as "Fusioncharts For Wordpress"
+3. Inside any page/post's edit page you will see a button named "Create FusionChart for this Page/Post"
 
 == Usage guide ==
 	* After installing the plugin you have to activate the plugin by moving on to the plugins page of wp-admin and clicking on activate of "Fusioncharts For Wordpress" plugin
@@ -45,24 +41,25 @@ License: GPLv3
 		bug fix and improvement of the plugin itself
 
 == Screenshots ==
-	1. /assets/screenshot-1.png
-	2. /assets/screenshot-2.png
-	3. /assets/screenshot-3.png
-	4. /assets/screenshot-4.png
-	5. /assets/screenshot-5.png
+1. Here is the button on the top right side of the edit page of a Wordpress page to start
+2. Here is how the chart settings form looks like
+3. Here is the preview of the chart
+4. Here is the embed chart section along with the code
+5. Here is the sample page with Fusionchart
 
 == Upcoming features ==
-	1. Chart type specific example data both XML and JSON
-	2. Improvement in the UI
+1. Chart type specific example data both XML and JSON
+2. Improvement in the UI
 
-== Change-log ==
+== Changelog ==
+v0.2
 	1. Added the feature to have data from JSON/XML url.
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
-		Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
-	= Can I use a paid version of FusionChart with this product
-		Well obviously you can, you just have to unzip all the files got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
+	Well you may just put the query in Google. :) Please visit http://www.fusioncharts.com/ to know the awesome
+	= Can I use a paid version of FusionChart with this product? =
+	Well obviously you can, you just have to unzip all the files got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
 == Donations ==
 	Well this product is free to use and always will be. Your support, suggestion to improve, issues reporting will be enough
 	for us. To report issues please visit https://github.com/sguha-work/fc-wp/issues
