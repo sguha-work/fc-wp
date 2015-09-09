@@ -4,7 +4,7 @@ Plugin URI: http://wordpress.org/plugins/fc-wp/
 Tags: wp, chart, javascript, php, json, data visualization
 Author: Sahasrangshu Guha
 Author URI: https://github.com/sguha-work/
-Contributors: Sahasrangshu Guha, Uttam Thapa
+Contributor: Uttam Thapa
 Contributor URI: https://github.com/ukthapa/
 Requires at least: 2.3
 Tested up to: 4.0
@@ -45,17 +45,17 @@ License: GPLv3
 		bug fix and improvement of the plugin itself
 
 == Screenshots ==
-	1. Here is the button on the top right side of the edit page of a Wordpress page to start
-	2. Here is how the chart settings form looks like
-	3. Here is the preview of the chart
-	4. Here is the embed chart section along with the code
-	5. Here is the sample page with Fusionchart
+	1. /assets/screenshot-1.png
+	2. /assets/screenshot-2.png
+	3. /assets/screenshot-3.png
+	4. /assets/screenshot-4.png
+	5. /assets/screenshot-5.png
 
 == Upcoming features ==
 	1. Chart type specific example data both XML and JSON
 	2. Improvement in the UI
 
-== Changelog ==
+== Change-log ==
 	1. Added the feature to have data from JSON/XML url.
 
 == Frequently Asked Questions ==
