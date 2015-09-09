@@ -52,8 +52,8 @@ License: GPLv3
 	5. /assets/screenshot-5.png
 
 == Upcoming features ==
-	1. Improvement in the UI
-
+	1. Chart type specific example data both XML and JSON
+	2. Improvement in the UI
 
 == Change-log ==
 	1. Added the feature to have data from JSON/XML url.

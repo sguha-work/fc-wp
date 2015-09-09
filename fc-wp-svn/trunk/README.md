@@ -61,7 +61,8 @@ This section describes how to install the plugin and get it working.
 	* Well obviously you can, you just have to unzip all the files you got from purchased product inside "wp-content/plugins/fc-wp/assets/fc-assets/" folder replacing the existing files
 
 ### Upcoming features
-1. Improvement in the UI
+1. Chart type specific example data both XML and JSON
+2. Improvement in the UI
 
 ### Change-log
 1. Added the feature to have data from JSON/XML url.
