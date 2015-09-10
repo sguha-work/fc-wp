@@ -10,7 +10,7 @@
 
 	function fcwp_showButton() {
 		if(fcwp_checkPage()) {
-			echo "<a href='javascript:void(0)' id='fcwp_button'><img height='20' width='20' src='".plugins_url('assets/images/fc.png', __FILE__)."'>&nbsp;&nbsp;&nbsp;Create fusionchart for this Page/Post</a>";
+			echo "<a href='javascript:void(0)' id='fcwp_button'><img height='20' width='20' src='".plugins_url('assets/images/fc.png', __FILE__)."'>&nbsp;&nbsp;&nbsp;Create FusionCharts for this Page/Post</a>";
 		}
 	}
 
