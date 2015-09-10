@@ -3,7 +3,7 @@
     display:none; /* Hide the DIV */
     position:fixed;  
     _position:absolute; /* hack for internet explorer 6 */  
-    height:auto;  
+    height:75%;  
     max-height: 500px;
     width:50%;  
     background:#F0F0FF;  
