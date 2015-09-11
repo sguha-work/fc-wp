@@ -8,8 +8,8 @@ Contributors: Sahasrangshu Guha, Uttam Thapa
 Contributor URI: https://github.com/ukthapa/
 Requires at least: 2.3
 Tested up to: 4.0
-Stable tag: 0.2
-Version: 0.2 
+Stable tag: 0.21
+Version: 0.21 
 License: GPLv3
 
 
@@ -52,8 +52,16 @@ License: GPLv3
 2. Improvement in the UI
 
 == Changelog ==
-v0.2
-	1. Added the feature to have data from JSON/XML url.
+
+== v0.21 ==
+
+1. Bug fix in chart generation library
+2. Changed sample data population
+3. UI changes
+ 
+== v0.2 ==
+
+1. Added the feature to have data from JSON/XML url.
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
