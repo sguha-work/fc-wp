@@ -52,15 +52,12 @@ License: GPLv3
 2. Improvement in the UI
 
 == Changelog ==
-
-== v0.21 ==
-
+v0.21
 1. Bug fix in chart generation library
 2. Changed sample data population
 3. UI changes
  
-== v0.2 ==
-
+v0.2
 1. Added the feature to have data from JSON/XML url.
 
 == Frequently Asked Questions ==
