@@ -62,15 +62,8 @@
 	            sanitize_text_field($_POST['chartHeight']), 
 	            sanitize_text_field($_POST['chartContainerId']), 
 	            sanitize_text_field($_POST['chartDataType']), 
-	            '{  
-	               "chart":
-	               {  
-	                  "caption":"'.sanitize_text_field($_POST['chartTitle']).'",
-	                  "subCaption":"",
-	                  "theme":"ocean"
-	               },
-	               "data":'.sanitize_text_field($_POST['chartData']).'
-	        }');    
+	            sanitize_text_field($_POST['chartData'])
+	            );    
 	    } else {
 	        $fcwp_chart = new fcwp_FusionCharts(
 	            sanitize_text_field($_POST['chartType']), 

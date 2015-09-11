@@ -1,6 +1,7 @@
 var fc_chartTypes = [{
         name: "Column 2D",
-        id: "Column2D"
+        id: "Column2D",
+        dataJSON: '{"data":[{"label":"Bakersfield Central","value":"880000"},{"label":"Garden Groove harbour","value":"730000"},{"label":"Los Angeles Topanga","value":"590000"},{"label":"Compton-Rancho Dom","value":"520000"},{"label":"Daly City Serramonte","value":"330000"}]}'
     }, {
         name: "Column 3D",
         id: "Column3D"
@@ -36,7 +37,8 @@ var fc_chartTypes = [{
         id: "MSColumn3D"
     }, {
         name: "Multi-series Line 2D",
-        id: "MSLine"
+        id: "msline",
+        dataJSON : '{"chart":{"caption":"Website Visitors","subCaption":"Last week Vs This week","xAxisName":"Day","yAxisName":"No. of Visitors","theme":"fint","showValues":"0","divLineIsDashed":"0","divlineAlpha":"50"},"categories":[{"category":[{"label":"Mon"},{"label":"Tue"},{"label":"Wed"},{"label":"Thu"},{"label":"Fri"},{"label":"Sat"},{"label":"Sun"}]}],"dataset":[{"seriesname":"Last Week","data":[{"value":"13000"},{"value":"14500"},{"value":"13500"},{"value":"15000"},{"value":"15500"},{"value":"17650"},{"value":"19500"}]},{"seriesname":"This Week","data":[{"value":"15400"},{"value":"16800"},{"value":"18800"},{"value":"22400"},{"value":"23800"},{"value":"25800"},{"value":"30800"}]}]        }'
     }, {
         name: "Multi-series Area 2D",
         id: "MSArea"
