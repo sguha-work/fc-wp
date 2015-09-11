@@ -10,8 +10,8 @@
 * Contributor URI: https://github.com/ukthapa/
 * Requires at least: 2.3
 * Tested up to: 4.0
-* Stable tag: 0.2
-* Version: 0.2 
+* Stable tag: 0.21
+* Version: 0.21 
 * License: GPLv3
 
 This plugin helps you to embed cool JavaScript charts inside your page or post. For charting it use Fusioncharts,The
@@ -65,6 +65,8 @@ This section describes how to install the plugin and get it working.
 2. Improvement in the UI
 
 ### Change-log
-1. Added the feature to have data from JSON/XML url.
+1. Bug fix in chart generation library
+2. Changed sample data population
+3. UI changes
 
 ### If any issue found or wish to request improvements feel free to drop a mail at sguha1988.life@gmail.com
