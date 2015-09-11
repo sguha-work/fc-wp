@@ -23,6 +23,10 @@ jQuery(document).ready(function(){
 		    
 		    jQuery('#fcwp_container').unbind('click').on('click', function() {
 		        unloadPopupBox();
+		    });
+
+		    jQuery("#fcwp_chartType").unbind("change").on("change", function(){
+		    	jQuery("#fcwp_chartDataType").trigger("change");
 		    });    	
 	    }),    
         loadPopupBox = (function() {    // To Load the Popupbox

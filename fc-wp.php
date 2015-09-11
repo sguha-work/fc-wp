@@ -1,7 +1,7 @@
 <?php
 /**
  * @package fc-wp
- * @version 0.2
+ * @version 0.21
  */
 /*
 Plugin Name: FusionCharts for Wordpress
@@ -9,7 +9,7 @@ Plugin URI: http://wordpress.org/plugins/fc-wp/
 Description: This is a plugin of FusionCharts for wordpress to add interactive javascript charts in your wordpress site's post or page
 Author: Sahasrangshu Guha 
 Contributor: Uttam Thapa
-Version: 0.2
+Version: 0.21
 Author URI: https://github.com/sguha-work/
 Contributor URI: https://github.com/ukthapa/
 */
