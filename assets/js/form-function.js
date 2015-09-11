@@ -1,23 +1,35 @@
 var loadFcChartTypes, bindFormElementEvents, populateDataSection, previewTheChart, validateChartForm, backToChartSettings, showEmbedCode;
 window.fcwp_main.loadFcChartTypes= (function(){
 	var index,optionHTML="";
-	for(index in fc_chartTypes) {
-		optionHTML += "<option value='"+fc_chartTypes[index].id+"'>"+fc_chartTypes[index].name+"</option>"
+	for(index in window.fcwp_main.fc_chartTypes) {
+		optionHTML += "<option value='"+window.fcwp_main.fc_chartTypes[index].id+"'>"+window.fcwp_main.fc_chartTypes[index].name+"</option>"
 	}
 	jQuery("#fcwp_chartType").html(optionHTML);
 });
 
 window.fcwp_main.populateDataSection = (function(element) {
-	var value = jQuery.trim(jQuery(element).val());
+	var value = jQuery.trim(jQuery(element).val()),
+	getData = (function(chartId, datatype){
+		for(var index in window.fcwp_main.fc_chartTypes) {
+			if(window.fcwp_main.fc_chartTypes[index].id == chartId) {
+				if(datatype=="json") {
+					return window.fcwp_main.fc_chartTypes[index].dataJSON;
+				} else {
+					return window.fcwp_main.fc_chartTypes[index].dataXML;
+				}
+			}
+		}
+	});
 	if(value != "") {
 		switch(value) {
 
 			case "json":
 				if(jQuery("#fcwp_data").length)jQuery("#fcwp_data").remove();
-				jQuery('<textarea id="fcwp_data" data-type="json">{"data":[{"label":"Bakersfield Central","value":"880000"},{"label":"Garden Groove harbour","value":"730000"},{"label":"Los Angeles Topanga","value":"590000"},{"label":"Compton-Rancho Dom","value":"520000"},{"label":"Daly City Serramonte","value":"330000"}]}</textarea>').insertAfter( jQuery(element) );
+				jQuery('<textarea id="fcwp_data" data-type="json"></textarea>').insertAfter( jQuery(element) );
 				jQuery("p",jQuery(element).parent()[0]).css({
 					"display": "none"
 				});
+				jQuery("#fcwp_data").val(getData(jQuery("#fcwp_chartType").val(), "json"));
 			break;
 
 			case "xml":
@@ -26,6 +38,7 @@ window.fcwp_main.populateDataSection = (function(element) {
 				jQuery("p",jQuery(element).parent()[0]).css({
 					"display": "none"
 				});
+				jQuery("#fcwp_data").val(getData(jQuery("#fcwp_chartType").val(), "xml"));
 			break;
 
 			case "jsonurl":
