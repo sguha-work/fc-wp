@@ -9,7 +9,7 @@ Contributor URI: https://github.com/ukthapa/
 Requires at least: 2.3
 Tested up to: 4.0
 Stable tag: 0.21
-Version: 0.21 
+Version: 0.22 
 License: GPLv3
 
 
@@ -52,6 +52,11 @@ License: GPLv3
 2. Improvement in the UI
 
 == Changelog ==
+
+== v0.22 ==
+
+1. Bug fix in parsing XML data
+2. Bug fix in parsing JSON data
 
 == v0.21 ==
 

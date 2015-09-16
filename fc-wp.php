@@ -1,7 +1,7 @@
 <?php
 /**
  * @package fc-wp
- * @version 0.21
+ * @version 0.22
  */
 /*
 Plugin Name: FusionCharts for Wordpress
