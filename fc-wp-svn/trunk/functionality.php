@@ -54,7 +54,13 @@
 	function fcwp_getChart() {
 		include_once 'fusioncharts.php';
 		$fcwp_chart;
-	    if(isset($_POST['chartDataType'])&&sanitize_text_field($_POST['chartDataType'])!="jsonurl"&&sanitize_text_field($_POST['chartDataType'])!="xmlurl") {
+		if(isset($_POST['chartDataType'])&&sanitize_text_field($_POST['chartDataType'])!="jsonurl"&&sanitize_text_field($_POST['chartDataType'])!="xmlurl") {
+	        $chartData;
+	    	if(sanitize_text_field($_POST['chartDataType'])==="xml") {
+	    		$chartData = $_POST['chartData'];
+	    	} else {
+	    		$chartData = sanitize_text_field($_POST['chartData']);
+	    	}
 	        $fcwp_chart = new fcwp_FusionCharts(
 	            sanitize_text_field($_POST['chartType']), 
 	            sanitize_text_field($_POST['chartId']), 
@@ -62,10 +68,10 @@
 	            sanitize_text_field($_POST['chartHeight']), 
 	            sanitize_text_field($_POST['chartContainerId']), 
 	            sanitize_text_field($_POST['chartDataType']), 
-	            sanitize_text_field($_POST['chartData'])
+	            $chartData
 	            );    
 	    } else {
-	        $fcwp_chart = new fcwp_FusionCharts(
+	    	$fcwp_chart = new fcwp_FusionCharts(
 	            sanitize_text_field($_POST['chartType']), 
 	            sanitize_text_field($_POST['chartId']), 
 	            sanitize_text_field($_POST['chartWidth']), 

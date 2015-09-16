@@ -1,0 +1,105 @@
+<div id="fcwp_popupDiv">    <!-- OUR PopupBox DIV-->
+
+
+    <div id="fcwp_step1">
+	    <h1>Fill up the form to have FusionCharts for this page/post</h1>
+
+	    <div class="fcwp_form-group">
+		    <div class="fcwp_row">
+			    <div class="fcwp_grid-1">
+				    <label>Enter chart title</label>
+					<input type="text" id="fcwp_chartTitle" value="This is a sample chart"/>
+				</div>
+			</div>
+		</div>
+
+	    <div class="fcwp_form-group">
+	    	<div class="fcwp_row">
+		    	<div class="fcwp_grid-2">
+			    	<label>Select chart type</label>
+		    		<select id="fcwp_chartType"></select>
+		    	</div>
+		    	<div class="fcwp_grid-2">
+					<label>Enter unique chart id</label>
+					<input type="text" id="fcwp_chartId" value="chart1"/>
+		    	</div>
+	    	</div>
+	    </div>
+
+	    <div class="fcwp_form-group">
+	    	<div class="fcwp_row">
+		    	<div class="fcwp_grid-2">
+			    	<label>Enter width of chart</label>
+			    	<input type="number" id="fcwp_chartWidth" value="400"/>
+		    	</div>
+		    	<div class="fcwp_grid-2">
+					 <label>Enter height of chart</label>
+					 <input type="number" id="fcwp_chartHeight" value="200"/>
+		    	</div>
+	    	</div>
+	    </div>
+
+
+	    <div class="fcwp_form-group">
+	    	<div class="fcwp_row">
+		    	<div class="fcwp_grid-2">
+			    	<label>Enter div id to render the chart</label>
+			    	<input type="text" id="fcwp_chartContainerId" value="fc_div1"/>
+		    	</div>
+		    	<div class="fcwp_grid-2">
+					<label>Select type of data</label>
+				    <select id="fcwp_chartDataType">
+				    	<option value="">Select</option>
+				    	<option value="json">JSON</option>
+				    	<option value="xml">XML</option>
+				    	<option value="jsonurl">JSON URL</option>
+				    	<option value="xmlurl">XML URL</option>
+				    </select>
+				    <p><em>The section to enter data will be populated after selecting data type.</em></p>
+		    	</div>
+		    	<div class="fcwp_grid-1">
+		    		<div id="showChartData">
+		    		</div>
+		    	</div>
+	    	</div>
+	    </div>
+
+
+	    <div class="fcwp_form-group">
+		    <div class="fcwp_row">
+			    <div class="fcwp_grid-1">
+				    
+	    			<button id="fcwp_previewButton" title="Preview the chart based on the form data">Preview The Chart</button>
+				</div>
+			</div>
+		</div>
+	    
+	    
+    </div>
+
+    <div id="fcwp_preview" style="display:none">
+    	<object data=""></object>
+    	<div class="fcwp_form-group">
+		    <div class="fcwp_row">
+			    <div class="fcwp_grid-1">
+		    	<button id="fcwp_chartSettingsButton" title="Go back to previous step and reconfigure the chart">Back to Chart Settings</button>
+		    	<button id="fcwp_embedChartButton" title="If the chart looks alright lets embed it">Embed This Chart</button>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div id="fcwp_code" style="display:none">
+    	<div class="fcwp_form-group">
+		    <div class="fcwp_row">
+			    <div class="fcwp_grid-1">
+				    <label>Copy this code then paste it inside the code of the page/post to display FusionCharts.</label>
+	    			<textarea id="fcwp_embedCode" style="height:440px" readonly="readonly"></textarea>
+				</div>
+			</div>
+		</div>
+    	
+    </div>
+
+    <a id="fcwp_popupBoxClose" title="close the popup">x</a>    
+</div>
