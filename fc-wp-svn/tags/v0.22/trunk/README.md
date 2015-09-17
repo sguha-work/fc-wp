@@ -69,7 +69,7 @@ This section describes how to install the plugin and get it working.
 
 1. Bug fix in parsing XML data
 2. Bug fix in parsing JSON data
-3. Chart type specific example data both XML and JSON
+
 == v0.21 ==
 
 1. Bug fix in chart generation library

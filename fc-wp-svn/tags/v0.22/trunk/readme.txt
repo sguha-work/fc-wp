@@ -47,26 +47,26 @@ License: GPLv3
 4. Here is the embed chart section along with the code
 5. Here is the sample page with Fusionchart
 
+== Upcoming features ==
+1. Chart type specific example data both XML and JSON
+2. Improvement in the UI
+
 == Changelog ==
 
-= v0.22 =
+== v0.22 ==
 
 1. Bug fix in parsing XML data
 2. Bug fix in parsing JSON data
-3. Chart type specific example data both XML and JSON
 
-= v0.21 =
+== v0.21 ==
 
 1. Bug fix in chart generation library
 2. Changed sample data population
 3. UI changes
  
-= v0.2 =
+== v0.2 ==
 
 1. Added the feature to have data from JSON/XML url.
-
-== Upcoming features ==
-1. Improvement in the UI
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
