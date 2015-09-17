@@ -53,6 +53,7 @@ License: GPLv3
 
 1. Bug fix in parsing XML data
 2. Bug fix in parsing JSON data
+3. Chart type specific example data both XML and JSON
 
 = v0.21 =
 
@@ -65,8 +66,7 @@ License: GPLv3
 1. Added the feature to have data from JSON/XML url.
 
 == Upcoming features ==
-1. Chart type specific example data both XML and JSON
-2. Improvement in the UI
+1. Improvement in the UI
 
 == Frequently Asked Questions ==
 	= What about FusionChart? =
