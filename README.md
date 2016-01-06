@@ -9,9 +9,9 @@
 * Contributor: Uttam Thapa
 * Contributor URI: https://github.com/ukthapa/
 * Requires at least: 2.3
-* Tested up to: 4.0
-* Stable tag: 0.21
-* Version: 0.22 
+* Tested up to: 4.4
+* Stable tag: 0.23
+* Version: 0.23 
 * License: GPLv3
 
 This plugin helps you to embed cool JavaScript charts inside your page or post. For charting it use Fusioncharts,The
@@ -65,6 +65,12 @@ This section describes how to install the plugin and get it working.
 2. Improvement in the UI
 
 ### Change-log
+== v0.23 ==
+
+1. Fusioncharts libraries updated to latest version 3.10
+2. Two new chart types added Treemap chart and Zoom Scatter chart
+
+
 == v0.22 ==
 
 1. Bug fix in parsing XML data
