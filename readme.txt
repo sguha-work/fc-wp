@@ -7,9 +7,9 @@ Author URI: https://github.com/sguha-work/
 Contributors: Sahasrangshu Guha, Uttam Thapa
 Contributor URI: https://github.com/ukthapa/
 Requires at least: 2.3
-Tested up to: 4.0
-Stable tag: 0.22
-Version: 0.22 
+Tested up to: 4.4
+Stable tag: 0.23
+Version: 0.23 
 License: GPLv3
 
 
@@ -48,6 +48,11 @@ License: GPLv3
 5. Here is the sample page with Fusionchart
 
 == Changelog ==
+
+= v0.23 =
+
+1. Fusioncharts libraries updated to latest version 3.10
+2. Two new chart types added Treemap chart and Zoom Scatter chart
 
 = v0.22 =
 
